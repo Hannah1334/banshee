@@ -1,0 +1,457 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
+<style>
+body{
+background-color:#ffffff;
+background-image: url('https://i.imgur.com/2WFe9I7.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:left !important; 
+background-size:contain;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track-piece { background-color: #999999; }
+::-webkit-scrollbar-thumb:vertical {
+width: 1px;
+border: 2px solid #666666;
+background-color: #999999;
+}
+
+#title {
+position:absolute;
+width:40%;
+height:7%;
+top:10%;
+left:50%;
+font-family: 'Cinzel', serif;
+text-align:center;
+font-size:4.7vh;
+text-shadow: -2px 2px #666666;
+color:#000000;
+letter-spacing:5px;
+}
+
+#picborder {
+position:absolute;
+border:1px solid #000000;
+background:#ffffff;
+width:15%;
+height:30%;
+top:20%;
+left:50%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picborder:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#bansheepic {
+position:relative;
+border:1px solid #000000;
+width:89%;
+height:89%;
+left:5%;
+top:5%;
+background-image: url('https://i.imgur.com/f2ZmbRU.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#bansheepic:hover {
+background-image: url('https://i.imgur.com/sebgE6b.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#basicborder {
+position:absolute;
+border:1px solid #000000;
+background:#ffffff;
+width:23.5%;
+height:15%;
+top:20%;
+left:66.5%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#basicborder:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#basicgif1 {
+position:absolute;
+border:1px solid #000000;
+width:20%;
+height:75%;
+top:12%;
+left:3%;
+background-image: url('https://media.giphy.com/media/l0MYwXxKiwW39Dwcw/source.gif') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#basicgif2 {
+position:absolute;
+border:1px solid #000000;
+width:20%;
+height:75%;
+top:12%;
+left:76%;
+background-image: url('https://media.giphy.com/media/l0MYwXxKiwW39Dwcw/source.gif') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#basicbox {
+position:absolute;
+border:1px solid #000000;
+padding:2%;
+width:41.9%;
+height:62%;
+top:12%;
+left:26.5%;
+color:#000000;
+text-align:center;
+font-size:1vh;
+font-family: 'Ropa Sans', sans-serif;
+}
+
+#squadborder {
+position:absolute;
+border:1px solid #000000;
+background:#ffffff;
+width:23.5%;
+height:12%;
+top:38%;
+left:66.5%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#squadborder:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#squad {
+position:relative;
+border:1px solid #000000;
+width:93.3%;
+height:75%;
+top:12%;
+left:3%;
+text-align:center;
+color:#000000;
+font-family: 'Cinzel', serif;
+letter-spacing:10px;
+}
+
+#squad img {
+border: 1px solid #000000;
+height: 50%;
+width: 10%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+ 
+#squad img:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg) ;
+-ms-transform: rotate(360deg);
+transform: rotate(360deg) ;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1 {
+position:absolute;
+border:1px solid #000000;
+background:#000000;
+width:12%;
+height:3%;
+top:53%;
+left:50%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:1px solid #000000;
+background:#000000;
+width:12%;
+height:3%;
+top:53%;
+left:64%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:1px solid #000000;
+background:#000000;
+width:12%;
+height:3%;
+top:53%;
+left:78%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#contentborder {
+position:absolute;
+border:1px solid #000000;
+background:#ffffff;
+width:39.95%;
+height:30%;
+left:50%;
+top:59%;
+-webkit-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+box-shadow: -5px 5px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#contentborder:hover {
+-webkit-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-moz-box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+box-shadow: -10px 10px 5px 0px rgba(102,102,102,1);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#content {
+position:relative;
+border:1px solid #000000;
+padding:2%;
+overflow:auto;
+width:90.7%;
+height:76%;
+top:6%;
+left:2.5%;
+font-family: 'Ropa Sans', sans-serif;
+color:#000000;
+font-size:1.5vh;
+}
+
+.tabs {
+display:block;
+width:100%;
+height:100%;
+text-align:center;
+color:#ffffff;
+font-family: 'Cinzel', serif;
+text-transform:uppercase;
+font-size:2.3vh;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+letter-spacing:5px;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3 {
+display: none;
+}
+
+h1 {
+color:#ffffff;
+border-left: 6px solid #555555;
+border-right: 6px solid #555555;
+background-color: #888888;
+font-size:1.9vh;
+text-align:center;
+font-family: 'Cinzel', serif;
+letter-spacing:5px;
+}
+
+b {
+color:#666666;
+font-family: 'Lobster Two', cursive;
+}
+
+i {
+color:#999999;
+}
+
+a {
+color:#999999;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Lobster+Two|Ropa+Sans" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="title">
+Beware The Call
+</div>
+<div id="picborder">
+<div id="bansheepic"></div>
+</div>
+<div id="basicborder">
+<div id="basicgif1"></div>
+<div id="basicgif2"></div>
+<div id="basicbox">
+<b>Alias:</b><br>Banshee<br>
+<b>Age:</b><br>Late Twenties<br>
+<b>Gender:</b><br>Female<br>
+<b>Alignment:</b><br>Villain
+</div>
+</div>
+<div id="squadborder">
+<div id="squad">
+The Crew
+<br>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+<a target="_blank" href="http://"><img src="http://fp.chatango.com/profileimg/i/m/imgicon/full.jpg"/></a>
+</div>
+</div>
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1')">Inventory</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab2')">Abilities</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab3')">Backstory</span>
+</div>
+<div id="contentborder">
+<div id="content">
+<h1>Appearance</h1>
+There aren’t many distinguishing features about the Banshee to describe, she is often dressed in all black from head to toe, save for the white mask that covers a good majority of her face. Through the eyeholes of this rather strange choice of a face cover it is easy to see the orbs that stare back out, which appear to be pupil-less glowing balls of pure white with the slightest milky grey line around where a typical iris would be expected to be found. Very pale skin, almost as white as the haunting eyes, can be spotted around her chin and jaw, as well as a pair of full beautiful lips often intentionally colored a pastel purple or pink.
+<br><br>
+Her physique is hidden, although even under the layers of clothing a clear hourglass figure--as well as a defined bust--go along with her long inky black curls to paint a picture of femininity. The Banshee is clearly slim, although whether she has muscle or is sickly and malnourished is impossible to tell. As a cloaked figure she looms over most average females, standing exactly six-feet-two-inches tall (with thick soled boots on anyway) and should anyone have the opportunity to weigh her they’d find her coming in at roughly one-hundred-thirty pounds.
+<br><br>
+<h1>Personality</h1>
+Despite her more ominous appearance, most describe her presence to be quite enjoyable. Anyone who spends enough time around the Banshee to actually get a sort of gauge on her behavior often finds her to be quite the agreeable individual. They say she has a soothing voice and often smiles, treating everyone she’s addressing with respect regardless of whether they are stranger, ally, or foe. Her tone is generally kind, even flirtatious at most times, although there have been a few sightings of her losing her temper. These instances are rare, but her savage tones are known to be extremely intimidating, and her screams leave massive amounts of destruction in their wake.
+</div>
+</div>
+
+<div id="tab1">
+<h1>Tools & Equipment</h1>
+<b>Identity Concealer</b><br>
+There are no advanced traits or special abilities found in the basic attire that she wears. The Banshee’s “Villain Suit” consists of a black zip up hoodie with a long sleeved turtleneck underneath of the same color, a pair of black jeans, and--you guessed it--a pair of black leather gloves. Dark colorless combat boots offer her good traction and her feet plenty of protection. Her hood is always pulled up over her head, casting shadows over a face mostly concealed by a white mask clearly fashioned out of some unrecognizable animal’s skull with the bottom of its jaw missing, leaving the lower half of her own jaw open in a mark of completionist symbolism. The attire as a whole is form fitting just enough to allow her plentiful feminine curves to be obvious, but is still loose enough to hide any hints of her true physique.
+<br><br>
+<b>Metal Bat</b><br>
+A plain baseball bat crafted out of a typical metal alloy, weighing just as much as any other bat used in the actual sport and equally as sturdy. There is nothing very distinguishing about it, other than its silver chromatic color, and the white leather wrapped around its handle to make for an easier grip. She often wears it strapped to her back.
+</div>
+
+<div id="tab2">
+<h1>Core Ability</h1>
+The Banshee has a voice that can achieve impossible frequencies at will, and depending on the intent behind its use is incredibly effective at manipulating those around her, the more time spent under her influence the harder it is to block her out, and the deeper into the mind she can dig to leave a long term mark (aka if someone spends multiple rotations under her influence she can start using her voice in their head, making it that much harder to escape her influence). For example, she can seem inhumanly charismatic if she is using her voice with the intention of convincing others to agree with her opinions or get on board with her cause. Likewise she can achieve inhuman levels of intimidation simply by filling her tone with malice when intending to inflict fear. The Banshee is immune to the effects and skills caused by her own voice.
+<br><br>
+<h1>Skills</h1>
+<b>Mother's Lullaby</b><br>
+Soft alluring tones can be quietly hummed and those whose ears her voice reaches will begin to feel an onset of intense drowsiness. If her voice continues to reach them after a second rotation they will lose consciousness. If three rotations are spent successfully transmitting this ability into the ears of those around her, she will be able to choose a new singular target (within line of sight/as long as she can acknowledge their presence herself) to use this skill on telepathically rather than verbally. Should the afflicted (at ANY of these stages) ever get further than twenty feet away from her they will be outside of her voice's influential reach.
+<br><br>
+<b>Banshee's Scream</b><br>
+A long and loud shriek that reaches decibels deemed impossible for the human throat on its own. The Banshee's Scream releases so much force with its noise that the traveling soundwaves leave behind a path of destruction (capable of rendering through most basic materials below and equal to steel), the trade off being that they move considerably slower and their destruction makes them distinctly visible to the naked eye. Only capable of projecting in a single direction at a time, but if her scream remains uninterrupted or the soundwaves are not stopped they can travel up to twenty feet away from her, and cause a fifteen foot radius' worth of AoE damage at the very end of that twenty foot limit. Can cause extreme pain in the unprotected ears of those within five feet of the soundwaves themselves.
+<br><br>
+<b>Siren's Allure</b><br>
+Like an overzealous game of Simon Says, if the Banshee locks eyes with an individual and speaks to them with this skill active for a whole rotation (with consistent eye contact still) she can make them perform any singular basic task she asks of them, and they will continue to feel as though it is their own desire to help her, blissfully unaware of being under her ability. The more tasks successfully completed (one task per rotation, must be basic and within the individual’s legitimate capabilities) the more under her control they fall. A minimum of four completed tasks is required to thrall them into lovestruck slaves willing to do whatever she asks regardless of the costs, assuming they remain within twenty feet of her. Going further than that will break them from her influence, but they will have no memory of their time under her control. A minimum of three completed tasks is required before she can start making requests to her victim telepathically.
+<br>
+<b>Siren's Allure UPGRADE: Infallible Siren</b><br>
+She no longer needs to lock eyes with her victims, but does need to have their attention and be speaking directly to them assuming they can actually understand her words or hear her. A whole rotation of preparation before being able to request a task under her influence is no longer required, however, she will not be successful if immediately making a request or assigning a task without any build up. The Banshee must attempt to charm her victims and catch them in her web first, even if a full rotation charge is no longer required. It now takes only three successfully completed tasks for a victim to be thralled completely, and two successful completed tasks for her to be able to continue the skill and impart her voice with its same effects telepathically. The range of distance they can possibly spread from her before stepping out of her influence increases to thirty feet.
+</div>
+
+<div id="tab3">
+<h1>The Making Of A Banshee</h1>
+<p align="center"><img style="height:55%;" src="http://www.onlygfx.com/wp-content/uploads/2017/11/grunge-question-mark-8.png"/><br><br>To be announced...</p>
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Banshee.mp3" autostart="true" loop="true">
